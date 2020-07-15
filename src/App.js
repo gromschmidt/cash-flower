@@ -14,6 +14,10 @@ import CustomerListing from './pages/customer/CustomerListing'
 import CustomerDetail from './pages/customer/CustomerDetail'
 import CustomerCreate from './pages/customer/CustomerCreate'
 
+import InvoiceListing from './pages/invoice/InvoiceDetail'
+import InvoiceDetail from './pages/invoice/InvoiceDetail'
+import InvoiceCreate from './pages/invoice/InvoiceCreate'
+
 
 
 
@@ -27,7 +31,7 @@ const App = () => {
         <LoginPage/>
       </Route>
 
-      <Route exact path="/user/:userID">
+      <Route path="/user/:userID">
         <LoginPage/>
       </Route>
 
@@ -39,12 +43,12 @@ const App = () => {
       */}
 
       {/* UserListing - Show all Customers */}
-      <Route exact path="/user">
+      <Route path="/user">
         <UserListing/>
       </Route>
 
       {/* UserDetail - show one Customer */}
-      <Route exact path="/user/:userID">
+      <Route path="/user/:userID">
         <UserDetail/>
       </Route>
       
@@ -60,19 +64,40 @@ const App = () => {
         <CustomerListing/>
       </Route>
 
+      {/* CustomerCreate - create new Customer */}
+      <Route exact path="/customer/add/new">
+        <CustomerCreate/>
+      </Route>
+
       {/* CustomerDetail - show one Customer */}
       <Route exact path="/customer/:customerID">
         <CustomerDetail/>
       </Route>
       
-      {/* CustomerCreate - create new Customer */}
-      <Route exact path="/customer/add">
-        <CustomerCreate/>
+
+
+
+
+      {/* 
+      *
+      * Invoice Routes
+      *
+      */}
+
+      {/* InvoiceListing - Show all Invoices */}
+      <Route exact path="/invoice">
+        <InvoiceListing/>
+      </Route>
+      
+      {/* InvoiceCreate - create new Invoice */}
+      <Route exact path="/invoice/add/new">
+        <InvoiceCreate/>
       </Route>
 
-
-
-
+      {/* InvoiceDetail - show one Invoice */}
+      <Route exact path="/invoice/:invoiceID">
+        <InvoiceDetail/>
+      </Route>
 
      {/* Redirect all Pages not Listed above */}
       <Redirect to="/"></Redirect>
