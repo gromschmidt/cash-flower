@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'
-import getCustomers from '../../../database/helpers/lowDBHelpers';
+import {getCustomerById, updateCustomerById} from '../../../database/helpers/lowDBHelpers';
 
 const CustomerDetail = () => {
 
