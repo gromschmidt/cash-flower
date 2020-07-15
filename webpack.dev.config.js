@@ -20,6 +20,11 @@ module.exports = {
         include: defaultInclude
       },
       {
+        test: /\.tsx?$/,
+        use: [{ loader: 'awesome-typescript-loader' }],
+        include: defaultInclude
+      },
+      {
         test: /\.(jpe?g|png|gif)$/,
         use: [{ loader: 'file-loader?name=img/[name]__[hash:base64:5].[ext]' }],
         include: defaultInclude
@@ -29,8 +34,10 @@ module.exports = {
         use: [{ loader: 'file-loader?name=font/[name]__[hash:base64:5].[ext]' }],
         include: defaultInclude
       }
-    ]
+    ],
+    
   },
+
   target: 'electron-renderer',
   plugins: [
     new HtmlWebpackPlugin(),
