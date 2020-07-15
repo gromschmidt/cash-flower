@@ -1,0 +1,308 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Patrick Bässler",
+      "companyName": "Web Design",
+      "adress": {
+        "street": "Musterstraße",
+        "nr": "1",
+        "city": "Stuttgart",
+        "zip": "07072"
+      },
+      "phone": "01590 / 81 32 143",
+      "email": "baesslerpa@gmail.com",
+      "domain": "patrick-baessler.de",
+      "bankData": {
+        "name": "Sparkasse Pforzheim Calw",
+        "iban": "DE00 600 21234 6346345",
+        "bic": "123456788"
+      },
+      "steuerId": "62 417 385 890",
+      "briefFuss": "Es wird gemäß §19 Abs. 1 Umsatzsteuergesetz keine Umsatzsteuer erhoben. Der Gesamtbetrag ist ab Erhalt dieser Rechnung zahlbar innerhalb von 14 Tagen ohne Abzug. Wenn nicht anders angegeben entspricht das Leistungsdatum dem Rechnungsdatum."
+    },
+    {
+      "id": "u2",
+      "name": "Nadja Reutter",
+      "companyName": "Consulting",
+      "adress": {
+        "street": "Musterstraße",
+        "nr": "1",
+        "city": "Stuttgart",
+        "zip": "07072"
+      },
+      "phone": "012345/7890",
+      "email": "nadreutter@gmail.com",
+      "domain": "-",
+      "bankData": {
+        "name": "Sparkasse Pforzheim Calw",
+        "iban": "DE00 600 21234 6346345",
+        "bic": "123456788"
+      },
+      "steuerId": "62 417 385 890",
+      "briefFuss": "Es wird gemäß §19 Abs. 1 Umsatzsteuergesetz keine Umsatzsteuer erhoben. Der Gesamtbetrag ist ab Erhalt dieser Rechnung zahlbar innerhalb von 14 Tagen ohne Abzug. Wenn nicht anders angegeben entspricht das Leistungsdatum dem Rechnungsdatum."
+    }
+  ],
+  "invoices": [
+    {
+      "id": "202020",
+      "customerId": "c1",
+      "userId": "u1",
+      "created": "27.07.2019",
+      "title": "Akonto Rechnung from DB",
+      "comment": "Rechnung für die erbrachten Leistungen in den Monaten Juni und Juli.",
+      "positions": [
+        {
+          "id": "pos1",
+          "title": "Fachgeschäfte stellen sich vor",
+          "comment": "",
+          "value": "",
+          "hours": ""
+        },
+        {
+          "id": "pos2",
+          "title": "1. Redaktioneller Beitrag",
+          "comment": "Texterstellung (Juni)",
+          "value": 20,
+          "hours": 2.5
+        },
+        {
+          "id": "pos1",
+          "title": "2. Konzeption der weiteren Anzeigen",
+          "comment": "Motive für die Anzeigenserie sowie Datenversand und Terminabstimmung",
+          "value": 20,
+          "hours": 2.5
+        },
+        {
+          "id": "pos2",
+          "title": "3. Redaktioneller Beitrag erneute Schaltung",
+          "comment": "Textanpassung (Juli)",
+          "value": 20,
+          "hours": 1
+        },
+        {
+          "id": "pos1",
+          "title": "Facebook-Kampagne",
+          "comment": "",
+          "value": "",
+          "hours": ""
+        },
+        {
+          "id": "pos2",
+          "title": "",
+          "comment": "1. Facebook-Werbeanzeigen anlegen",
+          "value": 20,
+          "hours": 4
+        },
+        {
+          "id": "pos2",
+          "title": "",
+          "comment": "2. Überwachung / Auswertung der Kampagne",
+          "value": 20,
+          "hours": 2
+        },
+        {
+          "id": "pos2",
+          "title": "",
+          "comment": "3. Erstellen von zwei Facebook-Posts",
+          "value": 20,
+          "hours": 1
+        }
+      ]
+    },
+    {
+      "id": "202030",
+      "customerId": "c2",
+      "userId": "u1",
+      "created": "27.07.2019",
+      "title": "Abrechnung Dezember - Februar from DB",
+      "comment": "Lorem Ipsum dolor sit amet ",
+      "positions": [
+        {
+          "id": "pos1",
+          "title": "Lorem",
+          "comment": "Lorem ipsum dolor sit ament",
+          "value": 20,
+          "hours": 3.5
+        },
+        {
+          "id": "pos2",
+          "title": "Ispum",
+          "comment": "Lorem ipsum dolor sit ament",
+          "value": 20,
+          "hours": 1.5
+        }
+      ]
+    },
+    {
+      "id": "200220",
+      "customerId": "omuk6uul7zg",
+      "userId": "u1",
+      "positions": [
+        {
+          "id": "r6bk6uxdexp",
+          "title": "Lorem ",
+          "comment": "IPsum /n dolor sit",
+          "hours": "112",
+          "value": "100"
+        },
+        {
+          "id": "r6bk6uxdkgq",
+          "title": "Lorem 2",
+          "comment": "IPsum",
+          "hours": "1",
+          "value": "100"
+        }
+      ],
+      "title": "Test",
+      "comment": "",
+      "created": "27.07.2019"
+    },
+    {
+      "id": "200220",
+      "customerId": "c1",
+      "userId": "u1",
+      "positions": [
+        {
+          "id": "skk6v0ankr",
+          "title": "Webdesign",
+          "comment": "",
+          "hours": "",
+          "value": 40
+        },
+        {
+          "id": "skk6v0c8to",
+          "title": "",
+          "comment": "Erstellen von Layouts",
+          "hours": "4",
+          "value": "20"
+        }
+      ],
+      "title": "Test",
+      "comment": "",
+      "created": "27.07.2019"
+    },
+    {
+      "id": "200220",
+      "customerId": "c1",
+      "userId": "u1",
+      "positions": [
+        {
+          "id": "skk6v0czdh",
+          "title": "Afd ",
+          "comment": "hello",
+          "hours": "1",
+          "value": 40
+        }
+      ],
+      "title": "Test",
+      "comment": "",
+      "created": "27.07.2019"
+    },
+    {
+      "id": "200220",
+      "customerId": "c1",
+      "userId": "u1",
+      "positions": [
+        {
+          "id": "skk6v0czdh",
+          "title": "Afd ",
+          "comment": "hello",
+          "hours": "1",
+          "value": 40
+        },
+        {
+          "id": "skk6v0d4dt",
+          "title": "Afd 2",
+          "comment": "helloee",
+          "hours": "1",
+          "value": 40
+        }
+      ],
+      "title": "Test",
+      "comment": "",
+      "created": "27.07.2019"
+    },
+    {
+      "id": "200221",
+      "customerId": "c1",
+      "userId": "u2",
+      "positions": [
+        {
+          "id": "8z9k6w5jjpk",
+          "title": "Pinkt",
+          "comment": "Pinkt\nPinkt\nPinkt\nPinkt",
+          "hours": "1",
+          "value": 40
+        },
+        {
+          "id": "8z9k6w5jyan",
+          "title": "Pinkt6",
+          "comment": "Lorem",
+          "hours": "13",
+          "value": 40
+        },
+        {
+          "id": "8z9k6w5k94b",
+          "title": "Jo was geht ab",
+          "comment": "Lorem ipsum doer",
+          "hours": "100",
+          "value": 40
+        }
+      ],
+      "title": "Test Rechnung",
+      "comment": "Die Ist ein test",
+      "created": "27.07.2019"
+    }
+  ],
+  "customers": [
+    {
+      "id": "c1",
+      "slug": "carlos",
+      "name": "Carlos E-bikes",
+      "defaultPrice": 40,
+      "adress": {
+        "street": "Echte Straße",
+        "nr": "1",
+        "city": "Stuttgart",
+        "zip": "07072"
+      }
+    },
+    {
+      "id": "c2",
+      "slug": "a4b",
+      "name": "All 4 Baby",
+      "defaultPrice": 20,
+      "adress": {
+        "street": "Musterstraße",
+        "nr": "1",
+        "city": "Stuttgart",
+        "zip": "07072"
+      }
+    },
+    {
+      "id": "omuk6uul7zg",
+      "slug": "Plissee-Markt",
+      "name": "Plissee Markt",
+      "adress": {
+        "street": "Teststreet",
+        "nr": "1",
+        "city": "Nagold",
+        "zip": "72202"
+      },
+      "defaultPrice": "100"
+    },
+    {
+      "id": "p51k6uuw6v0",
+      "slug": "Gesundheits-Motor",
+      "name": "Gesundheits Motor",
+      "adress": {
+        "street": "Test",
+        "nr": "1",
+        "city": "Ebhausen",
+        "zip": "72224"
+      },
+      "defaultPrice": "30"
+    }
+  ]
+}

@@ -1,19 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 
-// Components
+/**
+ * Components
+ */
 import Header from './components/Header';
 
-// Pages
+/**
+ * Pages
+ */
 import LoginPage from './pages/login/LoginPage';
-
+// User
 import UserListing from './pages/user/UserListing'
 import UserDetail from './pages/user/UserDetail'
-
+// Customer
 import CustomerListing from './pages/customer/CustomerListing'
 import CustomerDetail from './pages/customer/CustomerDetail'
 import CustomerCreate from './pages/customer/CustomerCreate'
-
+// Invoice
 import InvoiceListing from './pages/invoice/InvoiceDetail'
 import InvoiceDetail from './pages/invoice/InvoiceDetail'
 import InvoiceCreate from './pages/invoice/InvoiceCreate'
@@ -30,11 +34,6 @@ const App = () => {
       <Route exact path="/">
         <LoginPage/>
       </Route>
-
-      <Route path="/user/:userID">
-        <LoginPage/>
-      </Route>
-
 
       {/* 
       *
@@ -74,10 +73,6 @@ const App = () => {
         <CustomerDetail/>
       </Route>
       
-
-
-
-
       {/* 
       *
       * Invoice Routes
