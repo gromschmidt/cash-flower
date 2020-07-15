@@ -1,4 +1,4 @@
-const User = {
+exports.User = {
   "id": "",
   "name": "",
   "companyName": "",
@@ -20,7 +20,7 @@ const User = {
   "briefFuss": ""
 }
 
-const Customer = {
+exports.Customer = {
   "id": "",
   "slug": "",
   "name": "",
@@ -33,7 +33,7 @@ const Customer = {
   }
 }
 
-const Invoice = {
+exports.Invoice = {
   "id": "",
   "customerId": "",
   "userId": "",
