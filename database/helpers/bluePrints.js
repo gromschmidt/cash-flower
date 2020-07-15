@@ -1,10 +1,12 @@
+const unique = require('uniqid')
+
 
 /**
  * User Object
  */
 exports.User = class User {
   constructor() {
-    this.id = ""
+    this.id = unique()
     this.name = ""
     this.companyName = ""
     this.adress = {
@@ -32,7 +34,7 @@ exports.User = class User {
  */
 exports.Customer = class Customer {
   constructor() {
-    this.id = ""
+    this.id = unique()
     this.slug = ""
     this.name = ""
     this.defaultPrice = 0
@@ -50,7 +52,7 @@ exports.Customer = class Customer {
  */
 exports.Invoice = class Invoice {
   constructor () {
-    this.id = ""
+    this.id = unique()
     this.customerId = ""
     this.userId = ""
     this.created = ""
@@ -62,7 +64,7 @@ exports.Invoice = class Invoice {
 
 exports.InvoicePosition = class InvoicePosition {
   constructor() {
-    this.id = ""
+    this.id = unique()
     this.title = ""
     this.comment = ""
     this.value = 0
