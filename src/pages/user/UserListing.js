@@ -1,12 +1,18 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 
  import { getUsers } from '../../../database/helpers/lowDBHelpers';
 
 
 const UserListing = () => {
+
+  const [users, setUsers] = useState(getUsers())
   
-  return ( <h1>UserListing</h1> );
+  return ( 
+    <div>
+      {users.map(user => <p>{user.name}</p>)}
+    </div>
+  )
 }
  
 export default UserListing;

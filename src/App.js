@@ -18,7 +18,7 @@ import CustomerListing from './pages/customer/CustomerListing'
 import CustomerDetail from './pages/customer/CustomerDetail'
 import CustomerCreate from './pages/customer/CustomerCreate'
 // Invoice
-import InvoiceListing from './pages/invoice/InvoiceDetail'
+import InvoiceListing from './pages/invoice/InvoiceListing'
 import InvoiceDetail from './pages/invoice/InvoiceDetail'
 import InvoiceCreate from './pages/invoice/InvoiceCreate'
 
@@ -42,12 +42,12 @@ const App = () => {
       */}
 
       {/* UserListing - Show all Customers */}
-      <Route path="/user">
+      <Route exact path="/user">
         <UserListing/>
       </Route>
 
       {/* UserDetail - show one Customer */}
-      <Route path="/user/:userID">
+      <Route exact path="/user/:userID">
         <UserDetail/>
       </Route>
       

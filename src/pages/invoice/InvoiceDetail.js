@@ -1,33 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom'
+import { getInvoiceById } from '../../../database/helpers/lowDBHelpers';
 
 
 const InvoiceDetail = () => {
 
   // The Invoice ID from Url
+  
   let { invoiceID } = useParams()
+  const [singleInvoice, setSingleInvoice] = useState(getInvoiceById(invoiceID))
 
-  /**
-   * DB Invioce functions
-   */
-  const db = {
-    /**
-     * Get invoice by id
-     * @param id invoice id
-     */
-    get(id) {
-      console.log('get'); 
-    },
-    /**
-     * Update invoice by id
-     * @param id invoice id
-     */
-    update(id) {
-      console.log('update'); 
-    }
-  }
-
-  return ( <h1>InvoiceDetail {invoiceID}</h1> );
+  return (
+  <div>
+    <h1>CustomerDetail {invoiceID}</h1>
+    <p>{singleInvoice.title}</p>
+  </div> 
+  )
 }
  
 export default InvoiceDetail;

@@ -1,36 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom'
 import {getCustomerById, updateCustomerById} from '../../../database/helpers/lowDBHelpers';
 
+
+/**
+ * Single Customer Page
+ */
 const CustomerDetail = () => {
 
   // The Customer ID from Url
   let { customerID } = useParams()
 
-  /**
-  * DB customer functions
-  */
-  const db = {
-    /**
-     * Get customer by id
-     * @param id customer id
-     */
-    get(id) {
-      console.log(getCustomers()); 
-    },
-    /**
-     * Update customer by id
-     * @param id customer id
-     */
-    update(id) {
-      console.log('update'); 
-    }
-  }
+  const [singleCustomer, setSingleCustomer] = useState(getCustomerById(customerID))
 
   return ( 
     <div>
       <h1>CustomerDetail {customerID}</h1>
-      <div onClick={db.get}>Klick</div>
+      <p>{singleCustomer.name}</p>
     </div> 
     );
 }

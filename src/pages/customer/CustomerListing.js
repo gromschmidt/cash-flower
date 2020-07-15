@@ -2,13 +2,18 @@ import React, { useState } from 'react';
 
 import { getCustomers } from '../../../database/helpers/lowDBHelpers';
 
-
+/**
+ * All Customers Page
+ */
 const CustomerListing = () => {
 
-  const [customers, setcustomers] = useState([])
-
-  console.log(getCustomers());
-  return ( <h1>CustomerListing</h1> );
+  const [customers, setCustomers] = useState(getCustomers())
+  
+  return ( 
+    <div>
+      {customers.map(customer => <p>{customer.name}</p>)}
+    </div> 
+  );
 }
  
 export default CustomerListing;

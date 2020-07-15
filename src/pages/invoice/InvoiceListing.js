@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { getInvoices } from '../../../database/helpers/lowDBHelpers';
+
 
 const InvoiceListing = () => {
-  return ( <h1>InvoiceListing</h1> );
+
+  const [invoices, setInvoices] = useState(getInvoices())
+  return ( 
+    <div>
+      <p>Lorem</p>
+      {invoices.map(invoice => <p>{invoice.title}</p>)}
+    </div> 
+  );
 }
  
 export default InvoiceListing;

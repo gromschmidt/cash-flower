@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 
+import {Invoice, InvoicePosition} from '../../../database/helpers/bluePrints';
+
+/**
+ * Create new Invoice Page
+ */
 const InvoiceCreate = () => {
-  return ( <h1>InvoiceCreate</h1> );
+
+  const [invoice, setInvoice] = useState(new Invoice())
+
+  return ( <div>
+    New Invoice
+  </div> )
 }
  
 export default InvoiceCreate;
