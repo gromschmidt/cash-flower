@@ -1,6 +1,5 @@
 const unique = require('uniqid')
 
-
 /**
  * User Object
  */
@@ -24,7 +23,7 @@ exports.User = class User {
       "bic" : "",
     }
     this.steuerId = ""
-    this.briefFuss = ""
+    this.footer = ""
   }
   
 }

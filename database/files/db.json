@@ -19,7 +19,7 @@
         "bic": "123456788"
       },
       "steuerId": "62 417 385 890",
-      "briefFuss": "Es wird gemäß §19 Abs. 1 Umsatzsteuergesetz keine Umsatzsteuer erhoben. Der Gesamtbetrag ist ab Erhalt dieser Rechnung zahlbar innerhalb von 14 Tagen ohne Abzug. Wenn nicht anders angegeben entspricht das Leistungsdatum dem Rechnungsdatum."
+      "footer": "Es wird gemäß §19 Abs. 1 Umsatzsteuergesetz keine Umsatzsteuer erhoben. Der Gesamtbetrag ist ab Erhalt dieser Rechnung zahlbar innerhalb von 14 Tagen ohne Abzug. Wenn nicht anders angegeben entspricht das Leistungsdatum dem Rechnungsdatum."
     },
     {
       "id": "u2",
@@ -40,7 +40,7 @@
         "bic": "123456788"
       },
       "steuerId": "62 417 385 890",
-      "briefFuss": "Es wird gemäß §19 Abs. 1 Umsatzsteuergesetz keine Umsatzsteuer erhoben. Der Gesamtbetrag ist ab Erhalt dieser Rechnung zahlbar innerhalb von 14 Tagen ohne Abzug. Wenn nicht anders angegeben entspricht das Leistungsdatum dem Rechnungsdatum."
+      "footer": "Es wird gemäß §19 Abs. 1 Umsatzsteuergesetz keine Umsatzsteuer erhoben. Der Gesamtbetrag ist ab Erhalt dieser Rechnung zahlbar innerhalb von 14 Tagen ohne Abzug. Wenn nicht anders angegeben entspricht das Leistungsdatum dem Rechnungsdatum."
     }
   ],
   "invoices": [

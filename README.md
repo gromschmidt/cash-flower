@@ -1,0 +1,1 @@
+ERROR with BUild when enabeling Minify Plugin
