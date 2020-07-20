@@ -39,7 +39,6 @@ function createWindow() {
     }
   })
 
-  //Update test loloo
 
   // and load the index.html of the app.
   let indexPath
