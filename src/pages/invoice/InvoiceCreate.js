@@ -15,7 +15,7 @@ const InvoiceCreate = () => {
   /**
    * Invoice state
    */
-  const [invoice, setInvoice] = useState(new Invoice())
+  const [invoice, setInvoice] = useState(new Invoice('test id'))
 
   /**
    * All positions for the Invoice

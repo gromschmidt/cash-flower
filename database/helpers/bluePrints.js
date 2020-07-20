@@ -48,12 +48,13 @@ exports.Customer = class Customer {
 
 /**
  * Invoice Object
+ * @param userId 
  */
 exports.Invoice = class Invoice {
-  constructor () {
+  constructor (userId) {
     this.id = unique()
     this.customerId = ""
-    this.userId = ""
+    this.userId = userId
     this.created = new Date()
     this.clearDate = this.created.toLocaleDateString('de-DE', {  weekday: 'narrow', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' })
     this.title = ""
