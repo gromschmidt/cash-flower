@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
-import {TextInputField, Pane, SelectMenu, Button} from 'evergreen-ui'
-import { getCustomers } from '../../database/helpers/lowDBHelpers';
+import {TextInputField, Pane, Combobox, Button} from 'evergreen-ui'
+
+import CustomerComboBox from './inputCombonents/CustomerComboBox';
+import AdressInputs from './inputCombonents/AdressInputs';
+
 /**
  * Strips an Object into Inputs
  */
+
 const InputsFromObject = ({obj, change}) => {
 
   /**
@@ -36,38 +40,15 @@ const InputsFromObject = ({obj, change}) => {
           <div key={n} className="input-wrap">
             <TextInputField label={key} name={key} type="text" value={obj[key]} onChange={e => onChangeHandler(e.target.value, [key])} disabled/>
           </div>
-          )
+        )
       
       // Show a dropdown with all Customers
       case 'customerId': 
-        const customersList = getCustomers()
-        const [customerSelect, setCustomerSelect] = useState()
-        return (
-          <div key={n} className="input-wrap">
-            <SelectMenu title={key} 
-            options={ customersList.map(customer => ({ label: customer.name, value: customer.id })) }
-            selected={customerSelect}
-            onSelect={item => setCustomerSelect(item)}>
-              <Button>{customerSelect || 'Select name...'}</Button>
-            </SelectMenu>
-          </div>
-        )
+        return (<CustomerComboBox key={n}/>)
 
       // Show subfields of adress
-      case 'adress':
-        return (
-          <Pane background="tint2" key={n}>
-            <p>Adresse</p>
-            {Object.keys(obj[key]).map((skey,m) => {
-              const {adress} = obj
-              return (
-                <div key={m} className="input-wrap">
-                <TextInputField label={skey} name={skey} type="text" value={adress[skey]} onChange={e => onChangeHandler(e.target.value, skey, 'adress')} />
-              </div>
-              )
-            })}
-          </Pane>
-        )
+      case 'adress': 
+        return ( <AdressInputs key={n} obj={obj.adress} onChangeHandler={onChangeHandler} /> )
       
       // Dont show
       case 'created':
