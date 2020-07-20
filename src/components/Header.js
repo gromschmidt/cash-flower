@@ -13,14 +13,12 @@ const Header = () => {
       <Button><Link to="/">Login</Link></Button>
       <hr/>
       <Button><Link to="/customer">Customers</Link></Button>
-      <Button><Link to="/customer/c1">Customer ID</Link></Button>
       <Button><Link to="/customer/add/new">Add new Customer</Link></Button>
       <hr/>
       <Button><Link to="/user">Users</Link></Button>
       <Button><Link to="/user/u1">User ID</Link></Button>
       <hr/>
       <Button><Link to="/invoice">Invoices</Link></Button>
-      <Button><Link to="/invoice/200221">Invoice ID</Link></Button>
       <Button><Link to="/invoice/add/new">Add new Invoice</Link></Button>
 
     </div>
