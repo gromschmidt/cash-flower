@@ -15,11 +15,14 @@ const CustomerCreate = () => {
   const saveNewCustomer = () => {
     createCustomer(customer)
   }
-  return ( <div>
-  <h1>CustomerCreate</h1>
-  { customer && <InputsFromObject obj={customer} change={setCustomer}/>}
-  <button onClick={saveNewCustomer}>Save</button>
-  </div> );
+
+  return ( 
+    <div>
+      <h1>CustomerCreate</h1>
+      { customer && <InputsFromObject obj={customer} change={setCustomer}/>}
+      <button onClick={saveNewCustomer}>Save</button>
+    </div> 
+  );
 }
  
 export default CustomerCreate;

@@ -13,10 +13,12 @@ const InvoiceCreate = () => {
 
   const [invoice, setInvoice] = useState(new Invoice())
 
-  
-  return ( <div>
-   { invoice && <InputsFromObject obj={invoice} change={setInvoice}/>}
-  </div> )
+
+  return ( 
+    <div>
+      { invoice && <InputsFromObject obj={invoice} change={setInvoice}/>}
+    </div> 
+  )
 }
  
 export default InvoiceCreate;

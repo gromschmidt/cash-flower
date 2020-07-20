@@ -12,8 +12,8 @@ const UserDetail = () => {
 
   return ( 
     <div>
-        <h1>UserDetail {userID}</h1>
-        <p>{singleUser.name}</p>
+      <h1>UserDetail {userID}</h1>
+      <p>{singleUser.name}</p>
     </div> 
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {TextInputField, Pane} from 'evergreen-ui'
 /**
  * Strips an Object into Inputs
  */
@@ -22,7 +22,7 @@ const InputsFromObject = ({obj, change}) => {
         break;
     } 
   }
-
+  
   /**
    * Make each key off Object to a input field
    */
@@ -33,34 +33,31 @@ const InputsFromObject = ({obj, change}) => {
       case 'id':
         return (
           <div key={n} className="input-wrap">
-            <label>{key}</label>
-            <input name={key} type="text" value={obj[key]} onChange={e => onChangeHandler(e.target.value, [key])} disabled/>
+            <TextInputField label={key} name={key} type="text" value={obj[key]} onChange={e => onChangeHandler(e.target.value, [key])} disabled/>
           </div>
           )
         
       // Show subfields of adress
       case 'adress':
         return (
-          <div key={n}>
+          <Pane background="tint2" key={n}>
             <p>Adresse</p>
             {Object.keys(obj[key]).map((skey,m) => {
               const {adress} = obj
               return (
                 <div key={m} className="input-wrap">
-                <label>{skey}</label>
-                <input name={skey} type="text" value={adress[skey]} onChange={e => onChangeHandler(e.target.value, skey, 'adress')} />
+                <TextInputField label={skey} name={skey} type="text" value={adress[skey]} onChange={e => onChangeHandler(e.target.value, skey, 'adress')} />
               </div>
               )
             })}
-          </div>
+          </Pane>
         )
         
       // Default case
       default:
         return (
           <div key={n} className="input-wrap">
-            <label>{key}</label>
-            <input name={key} type="text" value={obj[key]} onChange={e => onChangeHandler(e.target.value, [key])}/>
+            <TextInputField label={key} name={key} type="text" value={obj[key]} onChange={e => onChangeHandler(e.target.value, [key])}/>
           </div>
         )
     }

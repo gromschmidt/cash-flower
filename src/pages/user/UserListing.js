@@ -22,4 +22,4 @@ const UserListing = () => {
   )
 }
  
-export default UserListing;
+export default UserListing
