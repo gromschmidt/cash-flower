@@ -3,11 +3,10 @@ import { useParams } from 'react-router-dom'
 import { getInvoiceById } from '../../../database/helpers/lowDBHelpers';
 
 
-const InvoiceDetail = () => {
+const InvoicePrint = () => {
 
   // The Invoice ID from Url
   let { invoiceID } = useParams()
-
 
   const [invoice, setInvoice] = useState(getInvoiceById(invoiceID))
 
@@ -19,4 +18,4 @@ const InvoiceDetail = () => {
   )
 }
  
-export default InvoiceDetail;
+export default InvoicePrint;
