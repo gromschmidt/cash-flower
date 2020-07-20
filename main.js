@@ -36,11 +36,10 @@ function createWindow() {
     show: false,
     webPreferences: {
       nodeIntegration: true
-     
     }
   })
 
-  //Update test
+  //Update test loloo
 
   // and load the index.html of the app.
   let indexPath
