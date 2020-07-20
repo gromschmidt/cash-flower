@@ -48,7 +48,7 @@ exports.Customer = class Customer {
 
 /**
  * Invoice Object
- * @param userId 
+ * @param userId reference to User
  */
 exports.Invoice = class Invoice {
   constructor (userId) {
