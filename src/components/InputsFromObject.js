@@ -3,6 +3,7 @@ import {TextInputField, Pane, Combobox, Button} from 'evergreen-ui'
 
 import CustomerComboBox from './inputCombonents/CustomerComboBox';
 import AdressInputs from './inputCombonents/AdressInputs';
+import slugify from 'slugify';
 
 /**
  * Strips an Object into Inputs
@@ -18,6 +19,9 @@ const InputsFromObject = ({obj, change}) => {
    */
   let onChangeHandler = (value,key,parent) => {
     switch (parent) {
+      case 'name': 
+        console.log(value);
+        return change({...obj, name: value, slug: slugify(value)})
 
       case 'adress':
         return change({...obj, adress: {...obj.adress, [key]: value}})

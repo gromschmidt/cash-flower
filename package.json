@@ -51,6 +51,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
+    "slugify": "^1.4.4",
     "uniqid": "^5.2.0"
   },
   "devDependencies": {

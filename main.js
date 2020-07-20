@@ -36,6 +36,7 @@ function createWindow() {
     show: false,
     webPreferences: {
       nodeIntegration: true
+     
     }
   })
 

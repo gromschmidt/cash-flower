@@ -31,6 +31,7 @@ exports.User = class User {
 /**
  * Customer Object
  */
+
 exports.Customer = class Customer {
   constructor() {
     this.id = unique()
