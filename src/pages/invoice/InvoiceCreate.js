@@ -5,7 +5,7 @@ import {Invoice, InvoicePosition} from '../../../database/helpers/bluePrints';
 import InputsFromObject from '../../components/InputsFromObject';
 import { createInvoice } from '../../../database/helpers/lowDBHelpers';
 import { Button, Pane } from 'evergreen-ui';
-
+import ArrayToFields from './components/ArrayToFields';
 
 /**
  * Create new Invoice Page
@@ -29,7 +29,7 @@ const InvoiceCreate = () => {
     setPositions([...positions, new InvoicePosition()])
     console.log(positions)
   }
-
+  
   /**
    * Delete one Position Item in positions
    * @param {id} id from Item to delete
@@ -46,25 +46,6 @@ const InvoiceCreate = () => {
     </div> 
   )
 }
- 
-/**
- * Strip an Array of Positions into Inputs
- * @param arr Array to parse
- * @param change changeHandler
- * @param del deleteHandler
- */
 
-const ArrayToFields = ({arr, change, del}) => {
-  return (
-    <Pane background="tint2" marginBottom="16">
-      {arr.map(item => (
-        <>
-          <Button onClick={(e) => del(item.id)}>Delete</Button>
-          <InputsFromObject obj={item} change={change}/>
-        </>
-      ) )}
-    </Pane>
-  )
-}
 
 export default InvoiceCreate;
