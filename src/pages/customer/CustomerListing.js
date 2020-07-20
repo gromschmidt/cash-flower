@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {Link} from 'react-router-dom';
 import { getCustomers } from '../../../database/helpers/lowDBHelpers';
 
 /**
@@ -11,7 +11,13 @@ const CustomerListing = () => {
   
   return ( 
     <div>
-      {customers.map(customer => <p>{customer.name}</p>)}
+      {customers.map((customer, key) => (
+        <div key={key} className="customer-wrap">
+          <Link to={`/customer/${customer.id}`}>
+            <p>{customer.name}</p>
+          </Link>
+        </div>
+      ))}
     </div> 
   );
 }

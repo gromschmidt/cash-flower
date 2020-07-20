@@ -36,9 +36,7 @@ const App = () => {
       </Route>
 
       {/* 
-      *
       * User Routes
-      *
       */}
 
       {/* UserListing - Show all Customers */}
@@ -53,9 +51,7 @@ const App = () => {
       
 
       {/* 
-      *
       * Customer Routes
-      *
       */}
 
       {/* CustomerListing - Show all Customers */}
@@ -74,9 +70,7 @@ const App = () => {
       </Route>
       
       {/* 
-      *
       * Invoice Routes
-      *
       */}
 
       {/* InvoiceListing - Show all Invoices */}

@@ -1,8 +1,5 @@
 import React from 'react';
 
-//@TODO: Adresse ganz ausspielen 
-
-
 /**
  * Strips an Object into Inputs
  */
@@ -16,18 +13,23 @@ const InputsFromObject = ({obj, change}) => {
    */
   let onChangeHandler = (value,key,parent) => {
     switch (parent) {
+
       case 'adress':
         return change({...obj, adress: {...obj.adress, [key]: value}})
-        break;
     
       default:
         change({...obj, [key]: value})
         break;
     } 
   }
-  console.log(obj);
+
+  /**
+   * Make each key off Object to a input field
+   */
   let fields = Object.keys(obj).map((key,n) => {
     switch (key) {
+
+      // Field is disabled, id musnt be changed manually
       case 'id':
         return (
           <div key={n} className="input-wrap">
@@ -35,15 +37,16 @@ const InputsFromObject = ({obj, change}) => {
             <input name={key} type="text" value={obj[key]} onChange={e => onChangeHandler(e.target.value, [key])} disabled/>
           </div>
           )
-        break
+        
+      // Show subfields of adress
       case 'adress':
         return (
-          <div>
+          <div key={n}>
             <p>Adresse</p>
-            {Object.keys(obj[key]).map((skey,n) => {
+            {Object.keys(obj[key]).map((skey,m) => {
               const {adress} = obj
               return (
-                <div key={n} className="input-wrap">
+                <div key={m} className="input-wrap">
                 <label>{skey}</label>
                 <input name={skey} type="text" value={adress[skey]} onChange={e => onChangeHandler(e.target.value, skey, 'adress')} />
               </div>
@@ -51,7 +54,8 @@ const InputsFromObject = ({obj, change}) => {
             })}
           </div>
         )
-        break
+        
+      // Default case
       default:
         return (
           <div key={n} className="input-wrap">
@@ -63,6 +67,7 @@ const InputsFromObject = ({obj, change}) => {
   }
     )
 
+  // Render 
   return ( 
     <div className="object-inputs-wrap">
       {fields}
