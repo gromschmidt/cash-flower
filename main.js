@@ -40,6 +40,8 @@ function createWindow() {
     }
   })
 
+  //Update test
+
   // and load the index.html of the app.
   let indexPath
 
