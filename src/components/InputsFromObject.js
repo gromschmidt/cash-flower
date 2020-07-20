@@ -36,7 +36,10 @@ const InputsFromObject = ({obj, change}) => {
             <TextInputField label={key} name={key} type="text" value={obj[key]} onChange={e => onChangeHandler(e.target.value, [key])} disabled/>
           </div>
           )
-        
+      
+      // Dont show raw date    
+      case 'created':  break;
+
       // Show subfields of adress
       case 'adress':
         return (
