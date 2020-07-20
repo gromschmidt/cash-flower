@@ -1,5 +1,6 @@
-import React from 'react';
-import {TextInputField, Pane} from 'evergreen-ui'
+import React, {useState} from 'react';
+import {TextInputField, Pane, SelectMenu, Button} from 'evergreen-ui'
+import { getCustomers } from '../../database/helpers/lowDBHelpers';
 /**
  * Strips an Object into Inputs
  */
@@ -37,8 +38,20 @@ const InputsFromObject = ({obj, change}) => {
           </div>
           )
       
-      // Dont show raw date    
-      case 'created':  break;
+      // Show a dropdown with all Customers
+      case 'customerId': 
+        const customersList = getCustomers()
+        const [customerSelect, setCustomerSelect] = useState()
+        return (
+          <div key={n} className="input-wrap">
+            <SelectMenu title={key} 
+            options={ customersList.map(customer => ({ label: customer.name, value: customer.id })) }
+            selected={customerSelect}
+            onSelect={item => setCustomerSelect(item)}>
+              <Button>{customerSelect || 'Select name...'}</Button>
+            </SelectMenu>
+          </div>
+        )
 
       // Show subfields of adress
       case 'adress':
@@ -55,7 +68,11 @@ const InputsFromObject = ({obj, change}) => {
             })}
           </Pane>
         )
-        
+      
+      // Dont show
+      case 'created':
+      case 'positions':  break;
+
       // Default case
       default:
         return (
