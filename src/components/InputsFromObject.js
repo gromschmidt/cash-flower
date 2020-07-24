@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {TextInputField, Pane, Combobox, Button} from 'evergreen-ui'
+import {TextInputField, Text, Pane, Combobox, Button} from 'evergreen-ui'
 
 import CustomerComboBox from './inputCombonents/CustomerComboBox';
 import AdressInputs from './inputCombonents/AdressInputs';
@@ -42,7 +42,7 @@ const InputsFromObject = ({obj, change}) => {
       case 'id':
         return (
           <div key={n} className="input-wrap">
-            <TextInputField label={key} name={key} type="text" value={obj[key]} onChange={e => onChangeHandler(e.target.value, [key])} disabled/>
+            <Text>ID - {obj[key]}</Text>
           </div>
         )
       
