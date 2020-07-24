@@ -51,6 +51,9 @@ const InputsFromObject = ({obj, change, orderFunction}) => {
     }
   })
 
+  /**
+   * uses orderFunction from Props OR passes unchanged Fields
+   */
   const reorderedFields = orderFunction ? orderFunction(fields) : fields
 
 
