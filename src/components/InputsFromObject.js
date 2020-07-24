@@ -24,18 +24,18 @@ const InputsFromObject = ({obj, change, orderFunction}) => {
       // Field is disabled, id musnt be changed manually
       case 'id':
         return (
-          <div key={n} className="input-wrap">
+          <div key={key} className="input-wrap">
             <Text>ID - {obj[key]}</Text>
           </div>
         )
       
       // Show a dropdown with all Customers
       case 'customerId': 
-        return (<CustomerComboBox key={n}/>)
+        return (<CustomerComboBox key={key}/>)
 
       // Show subfields of adress
       case 'adress': 
-        return ( <AdressInputs key={n} obj={obj.adress} onChangeHandler={onChangeHandler} /> )
+        return ( <AdressInputs key={key} obj={obj.adress} onChangeHandler={onChangeHandler} /> )
       
       // Dont show
       case 'created':
@@ -44,19 +44,18 @@ const InputsFromObject = ({obj, change, orderFunction}) => {
       // Default case
       default:
         return (
-          <div key={n} className="input-wrap">
+          <div key={key} className="input-wrap">
             <TextInputField label={key} name={key} type="text" value={obj[key]} onChange={e => onChangeHandler(e.target.value, [key])}/>
           </div>
         )
     }
-  }
-    )
+  })
 
-  const reorderFields = () => {
-    orderFunction()
-  }
+  const reorderedFields = () => {
+    orderFunction(fields)
 
-  console.log(fields);
+  }
+reorderedFields()
 
   // Render 
   return ( 
