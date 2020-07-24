@@ -18,6 +18,10 @@ const CustomerCreate = () => {
   const saveNewCustomer = () => createCustomer(customer)
 
 
+  /**
+   * Reorder Function to pass into InputsFromObject
+   * @param {array} fields Fields from Callback set in InputsFromObject.js
+   */
   const orderFunction = (fields) => {
 
     const customOrder = [
@@ -28,9 +32,7 @@ const CustomerCreate = () => {
       "defaultPrice"
     ]
 
-    const orderedFields = customOrder.map((key, i) => fields.filter(field => field.key == key)[0])
-
-    return orderedFields
+    return customOrder.map( key => fields.filter(field => field.key == key)[0] )
   }
 
   return ( 
