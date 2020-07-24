@@ -51,16 +51,13 @@ const InputsFromObject = ({obj, change, orderFunction}) => {
     }
   })
 
-  const reorderedFields = () => {
-    orderFunction(fields)
+  const reorderedFields = orderFunction ? orderFunction(fields) : fields
 
-  }
-reorderedFields()
 
   // Render 
   return ( 
     <div className="object-inputs-wrap">
-      {fields}
+      {reorderedFields}
     </div>
    );
 }
